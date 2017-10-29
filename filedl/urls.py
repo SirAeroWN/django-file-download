@@ -19,5 +19,6 @@ from fdnld import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^download', views.test_text),
+    url(r'^download$', views.test_text),
+    url(r'^download/(?P<filename>[a-zA-Z0-9\.]+)/$', views.download_file),
 ]
